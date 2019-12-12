@@ -10,8 +10,8 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
 
-    //In Kotlin `var` is used to declare a mutable variable. On the other hand
-    //`internal` means a variable is visible within a given module.
+    // En Kotlin, `var` se usa para declarar una variable mutable. Por otra parte
+    // `internal` significa que una variable es visible dentro de un módulo dado.
     private var dbHelper = DatabaseHelper(this)
 
     /**
