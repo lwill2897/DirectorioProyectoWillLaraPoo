@@ -15,14 +15,14 @@ class MainActivity : AppCompatActivity() {
     private var dbHelper = DatabaseHelper(this)
 
     /**
-     * Let's create a function to show Toast message
+     * Creemos una función para mostrar el mensaje Toast
      */
     private fun showToast(text: String){
         Toast.makeText(this@MainActivity, text, Toast.LENGTH_LONG).show()
     }
 
     /**
-     * Let's create a function to show an alert dialog with data dialog.
+     * Creemos una función para mostrar un diálogo de alerta con diálogo de datos
      */
     private fun showDialog(title : String,Message : String){
         val builder = AlertDialog.Builder(this)
@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     /**
-     * Let's create a method to clear our edittexts
+     * Creemos un método para borrar nuestros textos de edición
      */
     private fun clearEditTexts(){
         nameTxt.setText("")
@@ -43,7 +43,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     /**
-     * Let's override our onCreate method.
+     * Anulemos nuestro método onCreate.
      */
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -56,7 +56,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     /**
-     * When our handleInserts button is clicked.
+     * Cuando se hace clic en nuestro botón handleInserts.
      */
     private fun handleInserts() {
         insertBtn.setOnClickListener {
@@ -72,7 +72,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     /**
-     * When our handleUpdates data button is clicked
+     * Cuando se hace clic en nuestro botón de datos de handleUpdates
      */
     private fun handleUpdates() {
         updateBtn.setOnClickListener {
@@ -92,7 +92,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     /**
-     * When our handleDeletes button is clicked
+     * Cuando se hace clic en nuestro botón handleDeletes
      */
     private fun handleDeletes(){
         deleteBtn.setOnClickListener {
@@ -107,7 +107,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     /**
-     * When our View All is clicked
+     * Cuando se hace clic en Ver todo
      */
     private fun handleViewing() {
         viewBtn.setOnClickListener(

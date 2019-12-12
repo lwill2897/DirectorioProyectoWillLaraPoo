@@ -7,17 +7,18 @@ import android.database.Cursor
 import android.database.sqlite.SQLiteDatabase
 
 /**
- * Let's start by creating our database CRUD helper class
- * based on the SQLiteHelper.
+
+ * Comencemos creando nuestra clase de ayuda CRUD de base de datos
+ * basado en SQLiteHelper.
  */
 class DatabaseHelper(context: Context) :
         SQLiteOpenHelper(context, DATABASE_NAME, null, 1) {
 
     /**
-     * Our onCreate() method.
-     * Called when the database is created for the first time. This is
-     * where the creation of tables and the initial population of the tables
-     * should happen.
+     * Nuestro método onCreate ().
+     * Se llama cuando se crea la base de datos por primera vez. Esto es
+     * donde la creación de tablas y la población inicial de las tablas
+     * debería suceder.
      */
     override fun onCreate(db: SQLiteDatabase) {
         db.execSQL("CREATE TABLE $TABLE_NAME (ID INTEGER PRIMARY KEY " +
@@ -25,10 +26,10 @@ class DatabaseHelper(context: Context) :
     }
 
     /**
-     * Let's create Our onUpgrade method
-     * Called when the database needs to be upgraded. The implementation should
-     * use this method to drop tables, add tables, or do anything else it needs
-     * to upgrade to the new schema version.
+     * Creemos nuestro método onUpgrade
+     * Llamado cuando la base de datos necesita ser actualizada. La implementación debería
+     * use este método para descartar tablas, agregar tablas o hacer cualquier otra cosa que necesite
+     * para actualizar a la nueva versión del esquema.
      */
     override fun onUpgrade(db: SQLiteDatabase, oldVersion: Int, newVersion: Int) {
         db.execSQL("DROP TABLE IF EXISTS $TABLE_NAME")
@@ -36,8 +37,8 @@ class DatabaseHelper(context: Context) :
     }
 
     /**
-     * Let's create our insertData() method.
-     * It Will insert data to SQLIte database.
+     * Creemos nuestro método insertData ().
+     * Insertará datos a la base de datos SQLIte.
      */
     fun insertData(name: String, surname: String, marks: String) {
         val db = this.writableDatabase
@@ -49,7 +50,7 @@ class DatabaseHelper(context: Context) :
     }
 
     /**
-     * Let's create  a method to update a row with new field values.
+     * Creemos un método para actualizar una fila con nuevos valores de campo.
      */
     fun updateData(id: String, name: String, surname: String, marks: String):
             Boolean {
@@ -64,7 +65,7 @@ class DatabaseHelper(context: Context) :
     }
 
     /**
-     * Let's create a function to delete a given row based on the id.
+     * Creemos una función para eliminar una fila dada basada en la identificación.
      */
     fun deleteData(id : String) : Int {
         val db = this.writableDatabase
@@ -72,7 +73,7 @@ class DatabaseHelper(context: Context) :
     }
 
     /**
-     * The below getter property will return a Cursor containing our dataset.
+     * La siguiente propiedad getter devolverá un cursor que contiene nuestro conjunto de datos.
      */
     val allData : Cursor
         get() {
@@ -81,9 +82,9 @@ class DatabaseHelper(context: Context) :
         }
 
     /**
-     * Let's create a companion object to hold our static fields.
-     * A Companion object is an object that is common to all instances of a given
-     * class.
+     * Creemos un objeto complementario para contener nuestros campos estáticos.
+     * Un objeto complementario es un objeto que es común a todas las instancias de un determinado
+     * clase.
      */
     companion object {
         const val DATABASE_NAME = "stars.db"
