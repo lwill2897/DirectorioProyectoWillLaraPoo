@@ -38,7 +38,7 @@ class DatabaseHelper(context: Context) :
 
     /**
      * Creemos nuestro método insertData ().
-     * Insertará datos a la base de datos SQLe.
+     * Insertará datos a la base de datos SQLIte.
      */
     fun insertData(name: String, surname: String, marks: String) {
         val db = this.writableDatabase
