@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Directorio</string>
+    <string name="id">ID</string>
+    <string name="Id">ID</string>
+    <string name="name">NAME:</string>
+    <string name="Name">NAME</string>
+    <string name="description">DESCRIPTION:</string>
+    <string name="Description">DESCRIPTION</string>
+    <string name="specialization">SPECIALIZATION:</string>
+    <string name="Specialization">SPECIALIZATION</string>
+    <string name="insert">INSERT</string>
+    <string name="update">UPDATE</string>
+    <string name="delete">DELETE</string>
+    <string name="view_all">VIEW ALL</string>
+</resources>
